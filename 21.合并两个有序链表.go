@@ -44,23 +44,23 @@ type ListNode struct {
 }
 
 func main() {
-	l1 := generateLinkList([]int{1, 2, 4})
-	l2 := generateLinkList([]int{1, 3, 4})
+	l1 := newLinkList([]int{1, 2, 4})
+	l2 := newLinkList([]int{1, 3, 4})
 	fmt.Println(walker(l1, []int{}))
 	fmt.Println(walker(l2, []int{}))
 	ll := mergeTwoLists(l1, l2)
 	fmt.Println(walker(ll, []int{}))
 }
 
-func generateLinkList(list []int) *ListNode {
-	var tailNode *ListNode
+func newLinkList(list []int) *ListNode {
+	var head *ListNode
 	for i := len(list) - 1; i >= 0; i-- {
-		tailNode = &ListNode{
+		head = &ListNode{
 			Val:  list[i],
-			Next: tailNode,
+			Next: head,
 		}
 	}
-	return tailNode
+	return head
 }
 
 func walker(ll *ListNode, values []int) []int {
