@@ -72,9 +72,7 @@ func removeDuplicates(nums []int) int {
 	for j := 1; j < len(nums); j++ {
 		if nums[i] != nums[j] {
 			i++
-			if nums[i] != nums[j] {
-				nums[i] = nums[j]
-			}
+			nums[i] = nums[j]
 		}
 	}
 	return i + 1
