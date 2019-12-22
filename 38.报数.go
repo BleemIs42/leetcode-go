@@ -48,9 +48,7 @@
 package main
 
 import "fmt"
-
 import "strconv"
-
 import "strings"
 
 func main() {
@@ -73,9 +71,9 @@ func countAndSay(n int) string {
 	arr := []int{1}
 	for index := 2; index <= n; index++ {
 		var tempArr []int
-		count := 0
+		count := 1
 		temp := arr[0]
-		for _, v := range arr {
+		for _, v := range arr[1:] {
 			if temp == v {
 				count++
 			} else {

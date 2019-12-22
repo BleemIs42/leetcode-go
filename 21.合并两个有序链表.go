@@ -23,17 +23,6 @@
  *
  */
 
-// @lc code=start
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- * 	Val  int
- * 	Next *ListNode
- * }
- */
-
-// 需要注释多余代码才能测试成功
-
 package main
 
 import "fmt"
@@ -70,6 +59,15 @@ func walker(ll *ListNode, values []int) []int {
 	values = append(values, ll.Val)
 	return walker(ll.Next, values)
 }
+
+// @lc code=start
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ * 	Val  int
+ * 	Next *ListNode
+ * }
+ */
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1 == nil {
