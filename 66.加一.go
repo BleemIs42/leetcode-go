@@ -50,9 +50,8 @@ func plusOne(digits []int) []int {
 		if digits[i] < 9 {
 			digits[i]++
 			return digits
-		} else {
-			digits[i] = 0
 		}
+		digits[i] = 0
 	}
 	return append([]int{1}, digits...)
 }
